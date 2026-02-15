@@ -72,7 +72,7 @@ export default function Home() {
           {/* Left: Character */}
           <div className="flex justify-center lg:justify-start animate-bounce-in">
             <img
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663356090598/cZlMZlIhFAAHCrCo.png"
+              src="/img/duto_mascot_transparent.png"
               alt="DUTO Character"
               className="w-80 h-80 object-contain animate-float drop-shadow-2xl"
             />
@@ -513,7 +513,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-3">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663356090598/wXURaJNHIqxKNDBD.png"
+                src="/img/duto_logo_horizontal_transparent.png"
                 alt="DUTO Logo"
                 className="h-12 object-contain"
               />
