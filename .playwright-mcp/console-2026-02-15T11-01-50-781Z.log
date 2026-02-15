@@ -1,0 +1,196 @@
+[    1653ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3002/:0
+[    1723ms] Error: ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/dist/lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+    at Object.getCompilationErrors (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:775:59)
+    at DevBundlerService.getCompilationError (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/lib/dev-bundler-service.js:39:55)
+    at DevServer.getCompilationError (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/next-dev-server.js:721:42)
+    at DevServer.findPageComponents (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/next-dev-server.js:691:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/base-server.js:1687:26)
+[    1723ms] [ERROR] ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/dist/lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747
+[    1762ms] [ERROR] ./app/globals.css
+Error evaluating Node.js code
+Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
+    [at lt (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/dist/lib.js:38:1643)]
+    [at <anonymous> (turbopack:///[turbopack-node]/transforms/postcss.ts:56:14)]
+    [at <anonymous>]
+    [at Module.init (turbopack:///[turbopack-node]/transforms/postcss.ts:43:33)]
+    [at run (turbopack:///[turbopack-node]/ipc/evaluate.ts:77:20)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747
+[   17262ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   18264ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   19269ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   20276ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   21278ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   26281ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   31285ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   36291ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   43013ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3002/:0
+[   43060ms] Error: ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: /Users/dikim02/Documents/cafe24/my/irusol-landing/app/globals.css:1:1: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/@tailwindcss/postcss/dist/index.js:10:6911)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+    at Object.getCompilationErrors (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:775:59)
+    at DevBundlerService.getCompilationError (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/lib/dev-bundler-service.js:39:55)
+    at DevServer.getCompilationError (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/next-dev-server.js:721:42)
+    at DevServer.findPageComponents (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/next-dev-server.js:691:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/base-server.js:1687:26)
+[   43061ms] [ERROR] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: /Users/dikim02/Documents/cafe24/my/irusol-landing/app/globals.css:1:1: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/@tailwindcss/postcss/dist/index.js:10:6911)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747
+[   43100ms] [ERROR] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: /Users/dikim02/Documents/cafe24/my/irusol-landing/app/globals.css:1:1: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/@tailwindcss/postcss/dist/index.js:10:6911)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747
+[   72281ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   73282ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   74285ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   75291ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   76295ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   81299ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   86303ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   91305ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[   96312ms] [ERROR] WebSocket connection to 'ws://localhost:3002/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_client_d0aa886c._.js:2250
+[  103147ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3002/:0
+[  103183ms] Error: ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/dikim02/Documents/cafe24/my/irusol-landing/app/globals.css:1:1: The `border-border` class does not exist. If `border-border` is a custom class, make sure it is defined within a `@layer` directive.
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at AtRule.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at processApply (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:380:29)]
+    [at /Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:551:9]
+    [at /Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/processTailwindFeatures.js:55:50]
+    [at async plugins (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/plugin.js:38:17)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+    at Object.getCompilationErrors (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:775:59)
+    at DevBundlerService.getCompilationError (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/lib/dev-bundler-service.js:39:55)
+    at DevServer.getCompilationError (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/next-dev-server.js:721:42)
+    at DevServer.findPageComponents (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/next-dev-server.js:691:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/base-server.js:1687:26)
+[  103184ms] [ERROR] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/dikim02/Documents/cafe24/my/irusol-landing/app/globals.css:1:1: The `border-border` class does not exist. If `border-border` is a custom class, make sure it is defined within a `@layer` directive.
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at AtRule.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at processApply (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:380:29)]
+    [at /Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:551:9]
+    [at /Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/processTailwindFeatures.js:55:50]
+    [at async plugins (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/plugin.js:38:17)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747
+[  103221ms] [ERROR] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/dikim02/Documents/cafe24/my/irusol-landing/app/globals.css:1:1: The `border-border` class does not exist. If `border-border` is a custom class, make sure it is defined within a `@layer` directive.
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at AtRule.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at processApply (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:380:29)]
+    [at /Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:551:9]
+    [at /Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/processTailwindFeatures.js:55:50]
+    [at async plugins (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/plugin.js:38:17)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747
+[  134602ms] [ERROR] ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: /Users/dikim02/Documents/cafe24/my/irusol-landing/app/globals.css:1:1: The `bg-background` class does not exist. If `bg-background` is a custom class, make sure it is defined within a `@layer` directive.
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at AtRule.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at processApply (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:380:29)]
+    [at /Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/lib/expandApplyAtRules.js:551:9]
+    [at /Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/processTailwindFeatures.js:55:50]
+    [at async plugins (/Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/tailwindcss/lib/plugin.js:38:17)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747

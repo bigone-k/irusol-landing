@@ -1,0 +1,57 @@
+[      82ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3002/:0
+[     124ms] Error: ./app/globals.css:1263:8
+Parsing CSS source code failed
+  1261 | }
+  1262 |
+> 1263 | @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+       |        ^
+  1264 |
+  1265 | /* Design Philosophy: Organic Gamification
+  1266 |  * - Natural growth curves with soft flowing shapes
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./app/globals.css:1263:8)
+    at Object.getCompilationErrors (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/hot-reloader-turbopack.js:775:59)
+    at DevBundlerService.getCompilationError (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/lib/dev-bundler-service.js:39:55)
+    at DevServer.getCompilationError (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/next-dev-server.js:721:42)
+    at DevServer.findPageComponents (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/dev/next-dev-server.js:691:43)
+    at async DevServer.renderErrorToResponseImpl (file:///Users/dikim02/Documents/cafe24/my/irusol-landing/node_modules/next/dist/server/base-server.js:1687:26)
+[     128ms] [ERROR] ./app/globals.css:1263:8
+Parsing CSS source code failed
+  1261 | }
+  1262 |
+> 1263 | @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+       |        ^
+  1264 |
+  1265 | /* Design Philosophy: Organic Gamification
+  1266 |  * - Natural growth curves with soft flowing shapes
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747
+[     163ms] [ERROR] ./app/globals.css:1263:8
+Parsing CSS source code failed
+  1261 | }
+  1262 |
+> 1263 | @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');
+       |        ^
+  1264 |
+  1265 | /* Design Philosophy: Organic Gamification
+  1266 |  * - Natural growth curves with soft flowing shapes
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component] @ http://localhost:3002/_next/static/chunks/node_modules_next_dist_5b402162._.js:1747
