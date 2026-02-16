@@ -61,7 +61,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center overflow-hidden wave-divider"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `url('https://private-us-east-1.manuscdn.com/sessionFile/z1rLkRKTIJsOGwoPRR0ti9/sandbox/ap9O9Oc8pEf6fSKMgPqDda-img-1_1771142032000_na1fn_aGVyb19iYWNrZ3JvdW5k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvejFyTGtSS1RJSnNPR3dvUFJSMHRpOS9zYW5kYm94L2FwOU85T2M4cEVmNmZTS01nUHFEZGEtaW1nLTFfMTc3MTE0MjAzMjAwMF9uYTFmbl9hR1Z5YjE5aVlXTnJaM0p2ZFc1ay5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=R6BdI~ip2EeKAxdvSnxKuyvZtEsybJF4hB0RJMR0z0I-ihfSqTmnJqmeNM2dOn9Ey0k6RTDPd7gAG8kXyBqIBYZjZDQBxeM8EnppxtpzQxe1nZtdWRWRvq8z5InW69~aUsJcNODu8DVsJgiENfZUrY7FzGXLwze0RONb7JzZaKnw0XraXMmjEnsxBpSGCAMwPKm6jzkaLfxm71k2-dcQ4nSScZHWMxEXu8gyuwBkOdOT6pVR9BIIBH35PZqxfKJVI5~X15~tlhwye4wEhRM-uOn0xcotfqBz~KytRfMhg7XvYp-T1iNyUCIMjtgohj6QEU~CZB3Nq9eyHwBkKjYk6Q__')`,
           backgroundSize: 'cover',
@@ -113,17 +113,6 @@ export default function Home() {
               >
                 출시 알림 받기
               </Button>
-            </div>
-
-            <div className="pt-6 opacity-60">
-              <p className="text-sm">
-                <img
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663356090598/zNzuDmhEGUTPwxcL.png"
-                  alt="앱 미리보기"
-                  className="inline-block w-6 h-6 mr-2 opacity-50"
-                />
-                앱 미리보기 (추후 업데이트)
-              </p>
             </div>
           </div>
         </div>

@@ -1,9 +1,11 @@
-#!/bin/bash
+﻿#!/usr/bin/env bash
+set -euo pipefail
 
-# 현재 날짜를 yyyyMMdd 형식으로 가져오기
-DATE=$(date +%Y%m%d)
+# Always run from the script directory.
+cd "$(dirname "$0")"
 
-# Git 명령어 실행
+DATE="$(date +%Y%m%d)"
+
 git add .
-git commit -am "push ${DATE}"
+git commit -m "push ${DATE}"
 git push origin main
