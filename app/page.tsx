@@ -53,8 +53,8 @@ export default function Home() {
     setFormData({ name: "", email: "", phone: "", goalType: "", agreed: false });
   };
 
-  const scrollToForm = () => {
-    document.getElementById("signup-form")?.scrollIntoView({ behavior: "smooth" });
+  const openGoogleForm = () => {
+    window.open("https://forms.gle/zmyvceaMoJdvJdF87", "_blank");
   };
 
   return (
@@ -81,44 +81,57 @@ export default function Home() {
           {/* Right: Text & CTA */}
           <div className="text-center lg:text-left space-y-6 animate-fade-in-up">
             <div className="inline-block">
-              <span className="butter-chip">목표 달성의 새로운 방법</span>
+              <span className="butter-chip">게임같은 목표·루틴 앱</span>
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              <span className="gradient-text">캐릭터를 키우듯,</span>
+              <span className="gradient-text">캐릭터 성장으로</span>
               <br />
-              <span className="text-[var(--duto-text)]">인생을 키운다</span>
+              <span className="text-[var(--duto-text)]">꾸준함을 만들어요</span>
             </h1>
 
             <p className="text-lg lg:text-xl text-[var(--duto-muted)] max-w-xl">
-              목표를 오늘의 퀘스트로 구조화하고, 실행할수록 캐릭터가 성장하는 목표·루틴 앱
+              큰 꿈을 오늘의 퀘스트로, 하루하루 쌓이는 성장 기록
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button
-                size="lg"
-                className="text-lg px-8 py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all animate-pulse-glow"
-                style={{ backgroundColor: 'var(--duto-primary-dark)', color: 'white' }}
-                onClick={scrollToForm}
-              >
-                베타테스터 신청하기
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-6 rounded-full font-semibold border-2 hover:bg-[var(--duto-primary)] hover:text-white transition-all"
-                style={{ borderColor: 'var(--duto-primary)', color: 'var(--duto-primary-dark)' }}
-                onClick={scrollToForm}
-              >
-                출시 알림 받기
-              </Button>
+            <div className="space-y-4 pt-4">
+              <p className="text-xl font-semibold text-[var(--duto-text)]">
+                내 인생 첫 캐릭터가 기다리고 있어요 🥚
+              </p>
+              <p className="text-sm text-[var(--duto-muted)]">
+                지금 신청하면 무료로 먼저 시작할 수 있어요
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button
+                  size="lg"
+                  className="text-lg px-8 py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all animate-pulse-glow"
+                  style={{ backgroundColor: 'var(--duto-primary-dark)', color: 'white' }}
+                  onClick={openGoogleForm}
+                >
+                  베타테스터 신청하기
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-6 rounded-full font-semibold border-2 hover:bg-[var(--duto-primary)] hover:text-white transition-all"
+                  style={{ borderColor: 'var(--duto-primary)', color: 'var(--duto-primary-dark)' }}
+                  onClick={openGoogleForm}
+                >
+                  출시 알림 받기
+                </Button>
+              </div>
+
+              <p className="text-sm text-[var(--duto-muted)] pt-2">
+                베타가 부담되면, 출시 알림만 받아도 괜찮아요.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem Section - 3 Cards */}
+      {/* Problem Section - 4 Cards */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -126,7 +139,7 @@ export default function Home() {
             <p className="text-lg text-[var(--duto-muted)]">많은 분들이 같은 어려움을 겪고 있어요</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="floating-card p-8 border-2" style={{ borderColor: 'var(--duto-border)' }}>
               <div className="mb-4">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'var(--duto-primary)' }}>
@@ -134,7 +147,7 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-[var(--duto-text)]">계획은 세우는데, 실행이 안 돼요</h3>
-              <p className="text-[var(--duto-muted)]">의지 문제가 아니라 &apos;무엇부터&apos;가 안 보이기 때문</p>
+              <p className="text-[var(--duto-muted)]">의지 문제보다, &apos;오늘 뭐부터&apos;가 보이는 게 중요해요</p>
             </Card>
 
             <Card className="floating-card p-8 border-2" style={{ borderColor: 'var(--duto-border)' }}>
@@ -143,18 +156,28 @@ export default function Home() {
                   <Sparkles className="w-6 h-6" style={{ color: 'var(--duto-text)' }} />
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-[var(--duto-text)]">할 일이 많아질수록 더 막막해요</h3>
-              <p className="text-[var(--duto-muted)]">우선순위와 오늘의 행동이 흐려져요</p>
+              <h3 className="text-xl font-bold mb-3 text-[var(--duto-text)]">하고 싶은 건 많은데, 어디서부터 시작해야 할지 모르겠어요</h3>
+              <p className="text-[var(--duto-muted)]">목표가 막연하면 첫 발을 떼기가 정말 어려워요</p>
             </Card>
 
             <Card className="floating-card p-8 border-2" style={{ borderColor: 'var(--duto-border)' }}>
               <div className="mb-4">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'var(--duto-primary)' }}>
-                  <Sprout className="w-6 h-6 text-white" />
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-[var(--duto-text)]">목표 달성 과정이 지루하고, 동기부여가 안 돼요</h3>
+              <p className="text-[var(--duto-muted)]">달성 과정이 눈에 보이지 않으면 오래 이어가기 힘들어요</p>
+            </Card>
+
+            <Card className="floating-card p-8 border-2" style={{ borderColor: 'var(--duto-border)' }}>
+              <div className="mb-4">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'var(--duto-butter)' }}>
+                  <Sprout className="w-6 h-6" style={{ color: 'var(--duto-text)' }} />
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-3 text-[var(--duto-text)]">작심삼일이 반복되면 자책만 늘어요</h3>
-              <p className="text-[var(--duto-muted)]">작은 성공을 쌓을 구조가 필요해요</p>
+              <p className="text-[var(--duto-muted)]">잘 못한 것만 남고, 잘한 건 금방 흐릿해져요</p>
             </Card>
           </div>
         </div>
@@ -163,9 +186,22 @@ export default function Home() {
       {/* Solution Section - Core 3 Elements */}
       <section className="py-20" style={{ backgroundColor: 'var(--duto-bg)' }}>
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-[var(--duto-text)]">두토가 제공하는 해결책</h2>
-            <p className="text-lg text-[var(--duto-muted)]">목표 달성을 위한 3가지 핵심 요소</p>
+          <div className="text-center mb-16 space-y-6">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 shadow-md" style={{ backgroundColor: 'rgba(255, 223, 128, 0.15)', borderColor: 'var(--duto-butter)' }}>
+              <span className="text-lg font-bold text-[var(--duto-text)]">⭐ 만 명+이 선택한 &apos;목표관리 노션 템플릿&apos; 로직, 게임화 앱으로 탄생!</span>
+            </div>
+
+            <div className="space-y-3">
+              <h2 className="text-3xl lg:text-4xl font-bold text-[var(--duto-text)]">실행할수록 자라나는 나만의 캐릭터</h2>
+              <p className="text-lg text-[var(--duto-muted)] max-w-3xl mx-auto">
+                알에서 시작해 4단계 진화까지 — 당신의 꾸준함이 캐릭터의 성장으로 이어져요
+              </p>
+            </div>
+
+            <div className="pt-8 space-y-2">
+              <h3 className="text-2xl font-bold text-[var(--duto-text)]">목표 달성을 위한 3가지 핵심 요소</h3>
+              <p className="text-lg text-[var(--duto-muted)]">두토는 &apos;구조화 × 지속 × 피드백&apos;으로 꾸준함을 설계해요</p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
@@ -175,7 +211,10 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-[var(--duto-text)]">구조</h3>
               <p className="text-[var(--duto-muted)] leading-relaxed">
-                목표 → 프로젝트 → 퀘스트(습관/과업)로 체계화
+                목표를 &apos;오늘 할 퀘스트&apos;까지 구조화해, 바로 실행할 수 있게 해요.
+              </p>
+              <p className="text-sm text-[var(--duto-muted)] italic">
+                목표 → 프로젝트 → 퀘스트(습관/과업)
               </p>
             </div>
 
@@ -185,7 +224,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-[var(--duto-text)]">지속</h3>
               <p className="text-[var(--duto-muted)] leading-relaxed">
-                퀘스트 완료 = 성장/보상 루프로 동기 부여
+                퀘스트 완료가 곧 성장/보상으로 연결돼서, 작은 성공이 계속 이어져요.
               </p>
             </div>
 
@@ -195,19 +234,22 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-bold text-[var(--duto-text)]">피드백</h3>
               <p className="text-[var(--duto-muted)] leading-relaxed">
-                기록이 쌓일수록 리포트/코칭이 고도화(로드맵)
+                기록이 쌓일수록 코칭이 더 정교해져서, 다음 행동이 쉬워져요.
+              </p>
+              <p className="text-sm text-[var(--duto-muted)] italic">
+                *리포트/코칭은 로드맵으로 단계 적용*
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Usage Flow Section - 3 Steps */}
+      {/* Usage Flow Section - 4 Steps */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-[var(--duto-text)]">사용 흐름</h2>
-            <p className="text-lg text-[var(--duto-muted)]">간단한 3단계로 시작하세요</p>
+            <p className="text-lg text-[var(--duto-muted)]">쉬운 말로, 부담 없이 시작하세요</p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-12">
@@ -216,8 +258,9 @@ export default function Home() {
                 1
               </div>
               <Card className="flex-1 p-6 border-2" style={{ borderColor: 'var(--duto-border)' }}>
-                <h3 className="text-xl font-bold mb-2 text-[var(--duto-text)]">목표 입력</h3>
-                <p className="text-[var(--duto-muted)]">이루고 싶은 목표를 자유롭게 입력하세요</p>
+                <h3 className="text-xl font-bold mb-2 text-[var(--duto-text)]">비전으로 인생의 방향을 잡아요 <span className="text-sm font-normal text-[var(--duto-muted)]">(선택)</span></h3>
+                <p className="text-[var(--duto-muted)]">&quot;내가 어떤 사람이 되고 싶은지&quot; 적으면, 목표가 흔들리지 않아요.</p>
+                <p className="text-sm text-[var(--duto-muted)] italic mt-2">*(비전이 없어도 바로 시작할 수 있어요.)*</p>
               </Card>
             </div>
 
@@ -226,8 +269,8 @@ export default function Home() {
                 2
               </div>
               <Card className="flex-1 p-6 border-2" style={{ borderColor: 'var(--duto-border)' }}>
-                <h3 className="text-xl font-bold mb-2 text-[var(--duto-text)]">프로젝트/퀘스트로 쪼개기</h3>
-                <p className="text-[var(--duto-muted)]">큰 목표를 실행 가능한 작은 단위로 분해</p>
+                <h3 className="text-xl font-bold mb-2 text-[var(--duto-text)]">목표를 정해요</h3>
+                <p className="text-[var(--duto-muted)]">3개월 동안 이루고 싶은 목표를 한 줄로 정해요.</p>
               </Card>
             </div>
 
@@ -236,51 +279,83 @@ export default function Home() {
                 3
               </div>
               <Card className="flex-1 p-6 border-2" style={{ borderColor: 'var(--duto-border)' }}>
-                <h3 className="text-xl font-bold mb-2 text-[var(--duto-text)]">실행 로그 → 성장/리포트</h3>
-                <p className="text-[var(--duto-muted)]">완료할 때마다 캐릭터가 성장하고 기록이 쌓여요</p>
+                <h3 className="text-xl font-bold mb-2 text-[var(--duto-text)]">프로젝트로 &apos;실행 구조&apos;를 만들어요 <span className="text-sm font-normal text-[var(--duto-muted)]">(핵심)</span></h3>
+                <p className="text-[var(--duto-muted)]">목표를 4주 프로젝트로 쪼개서, 이번 달에 끝낼 일을 선명하게 만들어요.</p>
               </Card>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg" style={{ backgroundColor: 'var(--duto-primary-dark)' }}>
+                4
+              </div>
+              <Card className="flex-1 p-6 border-2" style={{ borderColor: 'var(--duto-border)' }}>
+                <h3 className="text-xl font-bold mb-2 text-[var(--duto-text)]">오늘의 퀘스트를 완료해요</h3>
+                <p className="text-[var(--duto-muted)]">프로젝트를 오늘 할 수 있는 퀘스트(습관/과업)로 바꾸고, 완료할수록 캐릭터가 성장하고 기록이 쌓여요.</p>
+              </Card>
+            </div>
+
+            <div className="mt-8 p-6 rounded-xl" style={{ backgroundColor: 'rgba(125, 230, 195, 0.1)' }}>
+              <p className="text-[var(--duto-muted)] text-center">
+                <span className="font-semibold text-[var(--duto-text)]">예:</span> &quot;5kg 감량(목표)&quot; → &quot;운동 루틴 만들기(4주 프로젝트)&quot; → &quot;주 3회 운동(퀘스트)&quot;
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* App Preview Section - Placeholder */}
+      {/* Growth System Preview Section */}
       <section className="py-20" style={{ backgroundColor: 'var(--duto-bg)' }}>
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-[var(--duto-text)]">앱 미리보기</h2>
-            <p className="text-lg text-[var(--duto-muted)]">실제 화면은 곧 공개됩니다</p>
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-4xl font-bold text-[var(--duto-text)]">성장 시스템 미리보기</h2>
+            <div className="max-w-3xl mx-auto space-y-3">
+              <p className="text-lg text-[var(--duto-muted)]">퀘스트를 완료할수록 내 캐릭터가 성장해요.</p>
+              <p className="text-lg text-[var(--duto-muted)]">알 → 새싹 → 개화 → 만개, 4단계 진화로 &apos;진행감&apos;을 눈에 보이게 만들어요.</p>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="p-8 text-center border-2 border-dashed" style={{ borderColor: 'var(--duto-border)', minHeight: '300px' }}>
-              <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/z1rLkRKTIJsOGwoPRR0ti9/sandbox/ap9O9Oc8pEf6fSKMgPqDda-img-4_1771142035000_na1fn_c3RydWN0dXJlX2RpYWdyYW0.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvejFyTGtSS1RJSnNPR3dvUFJSMHRpOS9zYW5kYm94L2FwOU85T2M4cEVmNmZTS01nUHFEZGEtaW1nLTRfMTc3MTE0MjAzNTAwMF9uYTFmbl9jM1J5ZFdOMGRYSmxYMlJwWVdkeVlXMC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=XP9lP0jqDGBcbGZK9jof1Q8M20juePRI0aTOsYiDD~Qx3IdyH3HcRGS6EjBHANVfDDMC0iYgKWShMiuj~NWvGq9SZzGp7Ji9pjNmP5eMORK9d-1gQv4TUorPaszJwrt~cVPwgm6dHHLfGGLDI82HKqhN5zu6fkv6zpHBIWvcsqfXHf48n9zbE5tcYxkzN1Msgqbno2kF753vEV61-ViORapQMgJBGCnS~QTtyb4ATUrI1yQf3ZMk4WgZJeqINI8uO1~3Nfe79Y8w~C2ESvQjxvfddl7gQeXhxYyt8fhinACM3du0e44tL1zcF3DwnaiZ9bOWJ9Yz0eoEAF8Sl9NsNw__"
-                alt="목표·프로젝트 구조"
-                className="w-full h-40 object-contain mb-4 opacity-60"
-              />
-              <h3 className="text-lg font-bold mb-2 text-[var(--duto-text)]">목표·프로젝트 구조</h3>
-              <p className="text-sm text-[var(--duto-muted)]">(스크린샷 추후 업데이트)</p>
-            </Card>
+          <div className="max-w-4xl mx-auto">
+            <Card className="p-8 border-2" style={{ borderColor: 'var(--duto-border)' }}>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <img
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/z1rLkRKTIJsOGwoPRR0ti9/sandbox/ap9O9Oc8pEf6fSKMgPqDda-img-4_1771142035000_na1fn_c3RydWN0dXJlX2RpYWdyYW0.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvejFyTGtSS1RJSnNPR3dvUFJSMHRpOS9zYW5kYm94L2FwOU85T2M4cEVmNmZTS01nUHFEZGEtaW1nLTRfMTc3MTE0MjAzNTAwMF9uYTFmbl9jM1J5ZFdOMGRYSmxYMlJwWVdkeVlXMC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=XP9lP0jqDGBcbGZK9jof1Q8M20juePRI0aTOsYiDD~Qx3IdyH3HcRGS6EjBHANVfDDMC0iYgKWShMiuj~NWvGq9SZzGp7Ji9pjNmP5eMORK9d-1gQv4TUorPaszJwrt~cVPwgm6dHHLfGGLDI82HKqhN5zu6fkv6zpHBIWvcsqfXHf48n9zbE5tcYxkzN1Msgqbno2kF753vEV61-ViORapQMgJBGCnS~QTtyb4ATUrI1yQf3ZMk4WgZJeqINI8uO1~3Nfe79Y8w~C2ESvQjxvfddl7gQeXhxYyt8fhinACM3du0e44tL1zcF3DwnaiZ9bOWJ9Yz0eoEAF8Sl9NsNw__"
+                    alt="4단계 캐릭터 진화 - 루미"
+                    className="w-full h-64 object-contain mb-4"
+                  />
+                </div>
+                <div className="text-center">
+                  <img
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/z1rLkRKTIJsOGwoPRR0ti9/sandbox/ap9O9Oc8pEf6fSKMgPqDda-img-2_1771142024000_na1fn_cXVlc3RfaWxsdXN0cmF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvejFyTGtSS1RJSnNPR3dvUFJSMHRpOS9zYW5kYm94L2FwOU85T2M4cEVmNmZTS01nUHFEZGEtaW1nLTJfMTc3MTE0MjAyNDAwMF9uYTFmbl9jWFZsYzNSZmFXeHNkWE4wY21GMGFXOXUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Ek1Jsl620zx2TntOguB4b7aJqqye5KeiKLVlD-e5g65pVXSOjZ1bWw1F4tr4quPItoqPfaLqDBhJOf9xvbEQ08m-XIt1jagyXkmFfIjYu30BcSg83vqH2D2CAQZ3TJweRel3Sqb6Ed7gxApC2LRIEtze~aj9IdEqTocNKtHJU9IXCtklGm48IHjn2V8SSUzQ5MnNcqzv73F4rHut90EoF5G4YI7oN8f4VM3Vl~ij0FRz0XxRDPioFNA9LaUA0Mtv0uJUSw00bwjM8-~3oQbH2ye7UlkUh9dPqVjf1aylGZ-bncojM6TBfgZhAmOGd90NOfHLiohinf2irZxcG7VHow__"
+                    alt="4단계 캐릭터 진화 - 루미"
+                    className="w-full h-64 object-contain mb-4"
+                  />
+                </div>
+                <div className="text-center">
+                  <img
+                    src="https://private-us-east-1.manuscdn.com/sessionFile/z1rLkRKTIJsOGwoPRR0ti9/sandbox/ap9O9Oc8pEf6fSKMgPqDda-img-3_1771142032000_na1fn_Z3Jvd3RoX3Zpc3VhbGl6YXRpb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvejFyTGtSS1RJSnNPR3dvUFJSMHRpOS9zYW5kYm94L2FwOU85T2M4cEVmNmZTS01nUHFEZGEtaW1nLTNfMTc3MTE0MjAzMjAwMF9uYTFmbl9aM0p2ZDNSb1gzWnBjM1ZoYkdsNllYUnBiMjQucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=peBYv8rEPMAXy4R0XXmf-NO9erN7F-787BJadpTDfiIM4L0iecsFFSgXQoWdtJg6ixrKX3E1IWFTHh0yy39L7IMAhrNgEvvWcMWwosnTW~LWAaMAvOQHmn--xcHc-Rt2WIK5u0FhYWglklqiepeQwsMkHCCcIi4gfBeeA9Pkz8pjsjoHao17wui23XcX2A77RlaTJiYfNuV91PNybOajbqXNQqxLz1IDkktyrej9VCm3zAxonWQ-cymh5KWWexhdd0KlTPJ~RipDFnqXIryKr0aDBN2-eaCIEkOqCMAyBvbFuyzI0HzD2~fXfQJYxNhANg0vQaYQj1sB0hzeHcZtqA__"
+                    alt="4단계 캐릭터 진화 - 루미"
+                    className="w-full h-64 object-contain mb-4"
+                  />
+                </div>
+              </div>
 
-            <Card className="p-8 text-center border-2 border-dashed" style={{ borderColor: 'var(--duto-border)', minHeight: '300px' }}>
-              <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/z1rLkRKTIJsOGwoPRR0ti9/sandbox/ap9O9Oc8pEf6fSKMgPqDda-img-2_1771142024000_na1fn_cXVlc3RfaWxsdXN0cmF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvejFyTGtSS1RJSnNPR3dvUFJSMHRpOS9zYW5kYm94L2FwOU85T2M4cEVmNmZTS01nUHFEZGEtaW1nLTJfMTc3MTE0MjAyNDAwMF9uYTFmbl9jWFZsYzNSZmFXeHNkWE4wY21GMGFXOXUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Ek1Jsl620zx2TntOguB4b7aJqqye5KeiKLVlD-e5g65pVXSOjZ1bWw1F4tr4quPItoqPfaLqDBhJOf9xvbEQ08m-XIt1jagyXkmFfIjYu30BcSg83vqH2D2CAQZ3TJweRel3Sqb6Ed7gxApC2LRIEtze~aj9IdEqTocNKtHJU9IXCtklGm48IHjn2V8SSUzQ5MnNcqzv73F4rHut90EoF5G4YI7oN8f4VM3Vl~ij0FRz0XxRDPioFNA9LaUA0Mtv0uJUSw00bwjM8-~3oQbH2ye7UlkUh9dPqVjf1aylGZ-bncojM6TBfgZhAmOGd90NOfHLiohinf2irZxcG7VHow__"
-                alt="오늘의 퀘스트"
-                className="w-full h-40 object-contain mb-4 opacity-60"
-              />
-              <h3 className="text-lg font-bold mb-2 text-[var(--duto-text)]">오늘의 퀘스트</h3>
-              <p className="text-sm text-[var(--duto-muted)]">(스크린샷 추후 업데이트)</p>
-            </Card>
-
-            <Card className="p-8 text-center border-2 border-dashed" style={{ borderColor: 'var(--duto-border)', minHeight: '300px' }}>
-              <img
-                src="https://private-us-east-1.manuscdn.com/sessionFile/z1rLkRKTIJsOGwoPRR0ti9/sandbox/ap9O9Oc8pEf6fSKMgPqDda-img-3_1771142032000_na1fn_Z3Jvd3RoX3Zpc3VhbGl6YXRpb24.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvejFyTGtSS1RJSnNPR3dvUFJSMHRpOS9zYW5kYm94L2FwOU85T2M4cEVmNmZTS01nUHFEZGEtaW1nLTNfMTc3MTE0MjAzMjAwMF9uYTFmbl9aM0p2ZDNSb1gzWnBjM1ZoYkdsNllYUnBiMjQucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=peBYv8rEPMAXy4R0XXmf-NO9erN7F-787BJadpTDfiIM4L0iecsFFSgXQoWdtJg6ixrKX3E1IWFTHh0yy39L7IMAhrNgEvvWcMWwosnTW~LWAaMAvOQHmn--xcHc-Rt2WIK5u0FhYWglklqiepeQwsMkHCCcIi4gfBeeA9Pkz8pjsjoHao17wui23XcX2A77RlaTJiYfNuV91PNybOajbqXNQqxLz1IDkktyrej9VCm3zAxonWQ-cymh5KWWexhdd0KlTPJ~RipDFnqXIryKr0aDBN2-eaCIEkOqCMAyBvbFuyzI0HzD2~fXfQJYxNhANg0vQaYQj1sB0hzeHcZtqA__"
-                alt="성장/보상"
-                className="w-full h-40 object-contain mb-4 opacity-60"
-              />
-              <h3 className="text-lg font-bold mb-2 text-[var(--duto-text)]">성장/보상</h3>
-              <p className="text-sm text-[var(--duto-muted)]">(스크린샷 추후 업데이트)</p>
+              <div className="mt-8 pt-8 border-t-2" style={{ borderColor: 'var(--duto-border)' }}>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 mt-0.5 flex-shrink-0" style={{ color: 'var(--duto-primary-dark)' }} />
+                    <span className="text-[var(--duto-muted)]">퀘스트 완료 → 성장 포인트 획득</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 mt-0.5 flex-shrink-0" style={{ color: 'var(--duto-primary-dark)' }} />
+                    <span className="text-[var(--duto-muted)]">일정 기준 달성 → 다음 단계 해금</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 mt-0.5 flex-shrink-0" style={{ color: 'var(--duto-primary-dark)' }} />
+                    <span className="text-[var(--duto-muted)]">성장 기록은 리포트/피드백으로 이어져요 <span className="text-sm italic">*(로드맵 적용 가능)*</span></span>
+                  </li>
+                </ul>
+              </div>
             </Card>
           </div>
         </div>
@@ -299,7 +374,8 @@ export default function Home() {
             </div>
 
             <h2 className="text-4xl font-bold mb-4 text-[var(--duto-text)]">베타로 먼저 만나보세요</h2>
-            <p className="text-lg text-[var(--duto-muted)] mb-12">신청 후 순차적으로 초대드려요</p>
+            <p className="text-lg text-[var(--duto-muted)] mb-4">베타로 가장 먼저 써보고, 피드백이 제품에 반영돼요.</p>
+            <p className="text-sm text-[var(--duto-muted)] mb-12">베타가 부담되면 출시 알림만 받아도 괜찮아요.</p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="p-6 border-2" style={{ borderColor: 'var(--duto-border)' }}>
@@ -307,11 +383,11 @@ export default function Home() {
                 <ul className="space-y-2 text-left">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--duto-primary-dark)' }} />
-                    <span className="text-[var(--duto-muted)]">출시/업데이트 소식 우선 안내</span>
+                    <span className="text-[var(--duto-muted)]">출시 소식을 가장 먼저 받아요</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: 'var(--duto-primary-dark)' }} />
-                    <span className="text-[var(--duto-muted)]">얼리 액세스 우선 초대</span>
+                    <span className="text-[var(--duto-muted)]">얼리 유저 혜택을 출시 시 안내드려요</span>
                   </li>
                 </ul>
               </Card>
@@ -338,7 +414,7 @@ export default function Home() {
               size="lg"
               className="text-lg px-10 py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
               style={{ backgroundColor: 'var(--duto-primary-dark)', color: 'white' }}
-              onClick={scrollToForm}
+              onClick={openGoogleForm}
             >
               베타테스터 신청하기
               <ChevronRight className="ml-2 h-5 w-5" />
@@ -352,11 +428,25 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <Card className="p-8 md:p-12 border-2 shadow-2xl" style={{ borderColor: 'var(--duto-border)' }}>
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-3 text-[var(--duto-text)]">베타/출시 알림 신청</h2>
+              <div className="text-center mb-8 space-y-4">
+                <h2 className="text-3xl font-bold text-[var(--duto-text)]">베타/출시 알림 신청</h2>
                 <p className="text-[var(--duto-muted)]">두토와 함께 성장을 시작하세요</p>
+
+                <div className="pt-4">
+                  <Button
+                    size="lg"
+                    className="text-lg px-10 py-6 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
+                    style={{ backgroundColor: 'var(--duto-primary-dark)', color: 'white' }}
+                    onClick={openGoogleForm}
+                  >
+                    신청하기 (구글 폼)
+                    <ChevronRight className="ml-2 h-5 w-5" />
+                  </Button>
+                  <p className="text-sm text-[var(--duto-muted)] mt-3">10초면 신청 완료</p>
+                </div>
               </div>
 
+              <div className="hidden">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-[var(--duto-text)] font-semibold">이름 *</Label>
@@ -460,6 +550,7 @@ export default function Home() {
                   {isSubmitting ? "제출 중..." : participationType === 'beta' ? "베타 신청 완료" : "대기자 등록 완료"}
                 </Button>
               </form>
+              </div>
             </Card>
           </div>
         </div>
@@ -480,7 +571,16 @@ export default function Home() {
 
             <Card className="p-6 border-2" style={{ borderColor: 'var(--duto-border)' }}>
               <h3 className="text-lg font-bold mb-2 text-[var(--duto-text)]">누가 쓰면 좋나요?</h3>
-              <p className="text-[var(--duto-muted)]">목표는 있지만 꾸준히 실행하기 어려운 분, 오늘 무엇부터 할지 정리가 필요한 분께 추천해요.</p>
+              <ul className="space-y-2 text-[var(--duto-muted)]">
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--duto-primary-dark)] mt-1">•</span>
+                  <span>목표는 있지만 꾸준히 실행하기 어려운 분</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[var(--duto-primary-dark)] mt-1">•</span>
+                  <span>재미있게 성취감을 쌓으며 목표를 달성하고 싶은 분</span>
+                </li>
+              </ul>
             </Card>
 
             <Card className="p-6 border-2" style={{ borderColor: 'var(--duto-border)' }}>
@@ -489,8 +589,11 @@ export default function Home() {
             </Card>
 
             <Card className="p-6 border-2" style={{ borderColor: 'var(--duto-border)' }}>
-              <h3 className="text-lg font-bold mb-2 text-[var(--duto-text)]">개인정보는 어떻게 사용되나요?</h3>
-              <p className="text-[var(--duto-muted)]">베타/출시 안내 목적에만 사용하며, 원하면 언제든 구독 해지할 수 있어요.</p>
+              <h3 className="text-lg font-bold mb-2 text-[var(--duto-text)]">개인정보는 어떻게 사용하나요?</h3>
+              <div className="space-y-2 text-[var(--duto-muted)]">
+                <p>제출한 정보는 <strong>베타 초대 및 출시 안내 목적</strong>으로만 사용합니다.</p>
+                <p>보관 기간: <strong>출시 후 3개월 이내 삭제</strong> (또는 요청 시 즉시 삭제)</p>
+              </div>
             </Card>
           </div>
         </div>
